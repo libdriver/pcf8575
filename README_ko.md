@@ -8,7 +8,7 @@
 
 [![MISRA](https://img.shields.io/badge/misra-compliant-brightgreen.svg)](/misra/README.md) [![API](https://img.shields.io/badge/api-reference-blue.svg)](https://www.libdriver.com/docs/pcf8575/index.html) [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](/LICENSE)
 
-2선식 양방향 버스(I2C)용 16비트 I/O 확장기는 2.5V ~ 5.5V VCC에서 작동하도록 설계되었습니다. PCF8575 디바이스는 I2C 인터페이스[직렬 클록(SCL), 직렬 데이터(SDA)]를 통해 대부분의 마이크로컨트롤러 제품군에 범용 원격 I/O 확장을 제공합니다. 이 디바이스는 LED 직접 구동을 위한 고전류 구동 기능을 갖춘 래치 출력을 포함하는 16비트 준양방향 입출력(I/O) 포트(P07~P00, P17~P10)를 가지고 있습니다. 각 준양방향 I/O는 데이터 방향 제어 신호를 사용하지 않고 입력 또는 출력으로 사용할 수 있습니다. 전원이 켜지면 이러한 I/O는 하이 레벨입니다. 이 모드에서는 VCC에 연결된 하나의 전류 소스만 활성화됩니다.
+2선식 양방향 버스(I2C)용 16비트 I/O 확장기는 2.5V ~ 5.5V VCC에서 작동하도록 설계되었습니다. PCF8575 디바이스는 I2C 인터페이스[직렬 클록(SCL), 직렬 데이터(SDA)]를 통해 대부분의 마이크로컨트롤러 제품군에 범용 원격 I/O 확장을 제공합니다. 이 디바이스는 LED 직접 구동을 위한 고전류 구동 기능을 갖춘 래치 출력을 포함하는 16비트 준양방향 입출력(I/O) 포트(P07-P00, P17-P10)를 가지고 있습니다. 각 준양방향 I/O는 데이터 방향 제어 신호를 사용하지 않고 입력 또는 출력으로 사용할 수 있습니다. 전원이 켜지면 이러한 I/O는 하이 레벨입니다. 이 모드에서는 VCC에 연결된 하나의 전류 소스만 활성화됩니다.
 
 LibDriver PCF8575는 LibDriver에서 출시한 PCF8575의 전체 기능 드라이버입니다. I/O 쓰기, I/O 읽기 및 기타 기능을 제공합니다. LibDriver는 MISRA를 준수합니다.
 
