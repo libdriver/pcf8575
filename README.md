@@ -10,7 +10,7 @@
 
 This 16-bit I/O expander for the two-line bidirectional bus (I2C) is designed for 2.5V to 5.5V VCC operation.The PCF8575 device provides general-purpose remote I/O expansion for most microcontroller families by way of the I2C interface [serial clock (SCL), serial data (SDA)].The device features a 16-bit quasi-bidirectional input/output (I/O) port (P07–P00, P17–P10), including latched outputs with high-current drive capability for directly driving LEDs. Each quasi-bidirectional I/O can be used as an input or output without the use of a data-direction control signal. At power on, the I/Os are high. In this mode, only a current source to VCC is active.
 
-LibDriver PCF8575 is a full-featured driver of PCF8575 launched by LibDriver.It provides I/O writing, I/O reading and other functions. LibDriver is MISRA compliant.
+LibDriver PCF8575 is a full-featured driver for PCF8575, launched by LibDriver.It provides I/O writing, I/O reading and additional features. LibDriver is MISRA compliant.
 
 ### Table of Contents
 

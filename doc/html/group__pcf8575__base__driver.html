@@ -184,12 +184,6 @@ Functions</h2></td></tr>
 <tr class="memitem:ga506135f4ebceee2fefffa043e4055713"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pcf8575__base__driver.html#ga506135f4ebceee2fefffa043e4055713">pcf8575_write</a> (<a class="el" href="group__pcf8575__base__driver.html#ga11f45b59311e4e052282b65dfecb041f">pcf8575_handle_t</a> *handle, <a class="el" href="group__pcf8575__base__driver.html#gaa19d1035d95777a6e4b49df519c1cc2c">pcf8575_pin_t</a> pin, <a class="el" href="group__pcf8575__base__driver.html#gaa82d88b6d3d5e16965f6d38cc17f67c1">pcf8575_pin_level_t</a> level)</td></tr>
 <tr class="memdesc:ga506135f4ebceee2fefffa043e4055713"><td class="mdescLeft">&#160;</td><td class="mdescRight">write the pin  <a href="group__pcf8575__base__driver.html#ga506135f4ebceee2fefffa043e4055713">More...</a><br /></td></tr>
 <tr class="separator:ga506135f4ebceee2fefffa043e4055713"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2c0c0dfee29b49411ce151c0274e72f9"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pcf8575__base__driver.html#ga2c0c0dfee29b49411ce151c0274e72f9">pcf8575_set_reg</a> (<a class="el" href="group__pcf8575__base__driver.html#ga11f45b59311e4e052282b65dfecb041f">pcf8575_handle_t</a> *handle, uint8_t *buf, uint16_t len)</td></tr>
-<tr class="memdesc:ga2c0c0dfee29b49411ce151c0274e72f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the chip register  <a href="group__pcf8575__base__driver.html#ga2c0c0dfee29b49411ce151c0274e72f9">More...</a><br /></td></tr>
-<tr class="separator:ga2c0c0dfee29b49411ce151c0274e72f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7f55143ab19ace5106c9cc132cea8ff3"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pcf8575__base__driver.html#ga7f55143ab19ace5106c9cc132cea8ff3">pcf8575_get_reg</a> (<a class="el" href="group__pcf8575__base__driver.html#ga11f45b59311e4e052282b65dfecb041f">pcf8575_handle_t</a> *handle, uint8_t *buf, uint16_t len)</td></tr>
-<tr class="memdesc:ga7f55143ab19ace5106c9cc132cea8ff3"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the chip register  <a href="group__pcf8575__base__driver.html#ga7f55143ab19ace5106c9cc132cea8ff3">More...</a><br /></td></tr>
-<tr class="separator:ga7f55143ab19ace5106c9cc132cea8ff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>pcf8575 base driver modules </p>
@@ -421,60 +415,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga7f55143ab19ace5106c9cc132cea8ff3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga7f55143ab19ace5106c9cc132cea8ff3">&#9670;&nbsp;</a></span>pcf8575_get_reg()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t pcf8575_get_reg </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="group__pcf8575__base__driver.html#ga11f45b59311e4e052282b65dfecb041f">pcf8575_handle_t</a> *&#160;</td>
-          <td class="paramname"><em>handle</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t *&#160;</td>
-          <td class="paramname"><em>buf</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint16_t&#160;</td>
-          <td class="paramname"><em>len</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>get the chip register </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8575 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*buf</td><td>pointer to a data buffer. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>data buffer length </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>status code<ul>
-<li>0 success</li>
-<li>1 read failed</li>
-<li>2 handle is NULL</li>
-<li>3 handle is not initialized </li>
-</ul>
-</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>none </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="driver__pcf8575_8c_source.html#l00339">339</a> of file <a class="el" href="driver__pcf8575_8c_source.html">driver_pcf8575.c</a>.</p>
-
-</div>
-</div>
 <a id="gadf8545d5a8cc3f45354e8f1fc65686c6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gadf8545d5a8cc3f45354e8f1fc65686c6">&#9670;&nbsp;</a></span>pcf8575_info()</h2>
 
@@ -642,60 +582,6 @@ Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>none </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="driver__pcf8575_8c_source.html#l00060">60</a> of file <a class="el" href="driver__pcf8575_8c_source.html">driver_pcf8575.c</a>.</p>
-
-</div>
-</div>
-<a id="ga2c0c0dfee29b49411ce151c0274e72f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga2c0c0dfee29b49411ce151c0274e72f9">&#9670;&nbsp;</a></span>pcf8575_set_reg()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t pcf8575_set_reg </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="group__pcf8575__base__driver.html#ga11f45b59311e4e052282b65dfecb041f">pcf8575_handle_t</a> *&#160;</td>
-          <td class="paramname"><em>handle</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t *&#160;</td>
-          <td class="paramname"><em>buf</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint16_t&#160;</td>
-          <td class="paramname"><em>len</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>set the chip register </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8575 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*buf</td><td>pointer to a data buffer. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>data buffer length </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>status code<ul>
-<li>0 success</li>
-<li>1 write failed</li>
-<li>2 handle is NULL</li>
-<li>3 handle is not initialized </li>
-</ul>
-</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>none </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="driver__pcf8575_8c_source.html#l00306">306</a> of file <a class="el" href="driver__pcf8575_8c_source.html">driver_pcf8575.c</a>.</p>
 
 </div>
 </div>

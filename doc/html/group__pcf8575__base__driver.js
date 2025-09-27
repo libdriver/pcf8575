@@ -57,11 +57,9 @@ var group__pcf8575__base__driver =
     ] ],
     [ "pcf8575_deinit", "group__pcf8575__base__driver.html#ga0ab400e8671e569aeb17f244690ea182", null ],
     [ "pcf8575_get_addr_pin", "group__pcf8575__base__driver.html#gafe9ea09fdcad8246f3970995c8323bca", null ],
-    [ "pcf8575_get_reg", "group__pcf8575__base__driver.html#ga7f55143ab19ace5106c9cc132cea8ff3", null ],
     [ "pcf8575_info", "group__pcf8575__base__driver.html#gadf8545d5a8cc3f45354e8f1fc65686c6", null ],
     [ "pcf8575_init", "group__pcf8575__base__driver.html#ga723ce3491c906d178133a497cf36c42a", null ],
     [ "pcf8575_read", "group__pcf8575__base__driver.html#ga609d67c0bec52210f0cbb1169f51242e", null ],
     [ "pcf8575_set_addr_pin", "group__pcf8575__base__driver.html#ga1c0473175e6180defab70523135a1add", null ],
-    [ "pcf8575_set_reg", "group__pcf8575__base__driver.html#ga2c0c0dfee29b49411ce151c0274e72f9", null ],
     [ "pcf8575_write", "group__pcf8575__base__driver.html#ga506135f4ebceee2fefffa043e4055713", null ]
 ];
