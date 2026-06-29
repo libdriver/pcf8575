@@ -161,6 +161,7 @@ uint8_t pcf8575_init(pcf8575_handle_t *handle)
         
         return 4;                                                        /* return error */
     }
+    handle->output_shadow = 0xFFFFU;                                     /* set 0xFFFF */
     handle->inited = 1;                                                  /* flag finish initialization */
     
     return 0;                                                            /* success return 0 */
@@ -257,7 +258,6 @@ uint8_t pcf8575_write(pcf8575_handle_t *handle, pcf8575_pin_t pin, pcf8575_pin_l
 {
     uint8_t res;
     uint8_t buf[2];
-    uint16_t prev;
     
     if (handle == NULL)                                                       /* check handle */
     {
@@ -267,19 +267,11 @@ uint8_t pcf8575_write(pcf8575_handle_t *handle, pcf8575_pin_t pin, pcf8575_pin_l
     {
         return 3;                                                             /* return error */
     }
-    
-    res = handle->iic_read_cmd(handle->iic_addr, (uint8_t *)buf, 2);          /* read data */
-    if (res != 0)                                                             /* check error */
-    {
-        handle->debug_print("pcf8575: iic read failed.\n");                   /* iic read failed */
-       
-        return 1;                                                             /* return error */
-    }
-    prev = (((uint16_t)buf[0]) << 8) | buf[1];                                /* set buffer */
-    prev &= ~(1 << pin);                                                      /* clear 0 */
-    prev |= level << pin;                                                     /* set data */
-    buf[0] = (prev >> 8) & 0xFF;                                              /* set buffer 0 */
-    buf[1] = (prev >> 0) & 0xFF;                                              /* set buffer 1 */
+
+    handle->output_shadow &= ~(1 << pin);                                     /* clear 0 */
+    handle->output_shadow |= level << pin;                                    /* set data */
+    buf[0] = (handle->output_shadow >> 8) & 0xFF;                             /* set buffer 0 */
+    buf[1] = (handle->output_shadow >> 0) & 0xFF;                             /* set buffer 1 */
     res = handle->iic_write_cmd(handle->iic_addr, (uint8_t *)buf, 2);         /* write data */
     if (res != 0)                                                             /* check error */
     {

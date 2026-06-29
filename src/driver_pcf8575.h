@@ -116,6 +116,7 @@ typedef struct pcf8575_handle_s
     void (*delay_ms)(uint32_t ms);                                             /**< point to a delay_ms function address */
     void (*debug_print)(const char *const fmt, ...);                           /**< point to a debug_print function address */
     uint8_t inited;                                                            /**< inited flag */
+    uint16_t output_shadow;                                                    /**< output shadow */
 } pcf8575_handle_t;
 
 /**
